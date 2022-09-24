@@ -3,7 +3,7 @@
 // console.log("hello world");
 // document.write("this is a doucment write");
 
-
+// "use strict"; :- to strictly use all the rules of js
 // 2 javasript console API
 console.log("hello world"); 
 console.warn("this is a warning");
@@ -182,9 +182,90 @@ console.log(
 
 // selecting using query
 
-sel=document.querySelector('.txt');
+let sel=document.querySelector('.txt');
 console.log(sel);
-selAll=document.querySelectorAll('.txt');
+let selAll=document.querySelectorAll('.txt');
 console.log(selAll);
 
+
+
+function clicked(){
+    console.log("button is clicked");
+}
+
+window.onload=function(){
+    console.log("document was loaded");
+}
 // Events in JavaScripts
+
+txt.addEventListener('click',function(){
+    console.log("the paragrpah2 was clicked");
+})
+
+
+// document.getElementsByClassName("txt")[0].addEventListener('mouseover',function(){
+//     console.log("on mouse over");
+// })
+
+// document.getElementsByClassName("txt bg-primery")[0].addEventListener('click',function(){
+//     console.log("will open anilkarela github in a new window");
+//     window.open('https://github.com/anilkarela');
+// })
+
+
+// to click on all class named txt we will run a for loop 
+// let item = document.querySelectorAll(".txt");
+// for(let i of item){
+//     i.onclick=function(){
+//         alert();
+//     }
+// }
+
+// txt.addEventListener('mousedown',function(e){
+    // if(e.which == 1){
+    //     document.write("left click");
+    // }
+    // else if(e.which == 3){
+    //     document.write("right click");
+    // }
+
+//     navigator.geolocation.getCurrentPosition(function(data){
+//                 console.log(data);
+//     });
+// })
+
+
+
+vikas.addEventListener('click',function(){
+    navigator.geolocation.getCurrentPosition(function(data){
+        document.querySelector(".textLocation").innerText=data.coords.latitude+" ,"+data.coords.longitude;
+
+    })
+})
+
+
+
+// document.getElementById("loc").addEventListener("click",function(){
+//     alert();
+// })
+
+// document.querySelector("#intxt").addEventListener('click',function(){
+//     document.getElementById('intxt').innerHTML="<b> pargarh 3 was clicked</b>";
+// })
+
+
+let prevHTML=document.getElementById("intxt").innerHTML;
+
+document.querySelector("#intxt").addEventListener('mousedown',function(){
+    document.getElementById("intxt").innerHTML="<b>this is changed text after clicking the clicking the previous paragrpah Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, ut placeat! Distinctio iure, perferendis doloremque sequi nemo ipsa, odio hic, optio minima delectus voluptatibus exercitationem explicabo amet consectetur porro eaque</b>";
+    console.log("mouse clicked in");
+    document.getElementById("intxt").style.backgroundColor="red";
+})
+
+document.getElementById("intxt").addEventListener('mouseup',function(){
+    document.getElementById("intxt").innerHTML=prevHTML;
+    console.log("mouse clicked out");
+document.getElementById("intxt").style.backgroundColor="green";
+})
+
+

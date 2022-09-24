@@ -1,6 +1,6 @@
-*{
+/* *{
     background-color:aliceblue;
-}
+} */
 #btn{
     display: flex;
     justify-content: center;
@@ -17,4 +17,14 @@
 }
 #txt{
     background-color: green;
+}
+
+#intxt{
+    box-shadow:8px 4px 12px #ccc;
+    padding:15px;
+    border-radius:20px;
+    transition: 0.3s;
+}
+#intxt:hover{
+    transform:scale(.9);
 }
