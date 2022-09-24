@@ -193,9 +193,9 @@ function clicked(){
     console.log("button is clicked");
 }
 
-window.onload=function(){
-    console.log("document was loaded");
-}
+// window.onload=function(){
+//     console.log("document was loaded");
+// }
 // Events in JavaScripts
 
 txt.addEventListener('click',function(){
@@ -257,15 +257,62 @@ vikas.addEventListener('click',function(){
 let prevHTML=document.getElementById("intxt").innerHTML;
 
 document.querySelector("#intxt").addEventListener('mousedown',function(){
-    document.getElementById("intxt").innerHTML="<b>this is changed text after clicking the clicking the previous paragrpah Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, ut placeat! Distinctio iure, perferendis doloremque sequi nemo ipsa, odio hic, optio minima delectus voluptatibus exercitationem explicabo amet consectetur porro eaque</b>";
+    document.getElementById("innertxt").innerText="this is changed text after clicking the clicking the previous paragrpah Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, ut placeat! Distinctio iure, perferendis doloremque sequi nemo ipsa, odio hic, optio minima delectus voluptatibus exercitationem explicabo amet consectetur porro eaque";
     console.log("mouse clicked in");
-    document.getElementById("intxt").style.backgroundColor="red";
+    document.getElementById("intxt").style.backgroundColor="yellow";
 })
 
 document.getElementById("intxt").addEventListener('mouseup',function(){
     document.getElementById("intxt").innerHTML=prevHTML;
     console.log("mouse clicked out");
-document.getElementById("intxt").style.backgroundColor="green";
+document.getElementById("intxt").style.backgroundColor="white";
 })
 
+// Arrow Function 
 
+// function summ(a,b){
+//     return a+b;
+// }
+
+const summ= (a,b)=>{
+    console.log(a+b);
+}
+
+// SetTimeOut and setInterval
+
+// logkaro = ()=> console.log("log karo");
+// setTimeout(logkaro,1000);
+// setTimeout(summ,2000,5,12);
+
+// const logkiya = ()=>{
+//     console.log("log kiya in 1 seconds");
+// }
+
+// var clr=setInterval(logkiya,1000);
+// use clearInterval(clr)/clearTimeout(clr) to cancel setInterval/setTimeout
+
+// setTimeout(clearInterval,5000,clr);
+
+// JavaScript LocalStorage
+console.log(localStorage);
+localStorage.setItem('name','Anil');
+localStorage.setItem('name1','vikas patidar');
+localStorage.setItem("name3","random");
+console.log(localStorage.getItem('name1'))
+localStorage.removeItem("name3") //to a item
+localStorage.clear(); // to clear the storage i=or remove all items.
+console.log(localStorage)
+
+// JSON
+obj={name:"avinash",length:1 ,lives:{jaipur:"hary\"ana"}};
+jso=JSON.stringify(obj);
+console.log(jso);
+console.log(typeof jso)
+let parsed=JSON.parse(`{"name":"avinash","length":1,"lives":{"jaipur":"hary\\"ana"}}`);
+
+console.log(typeof parsed)
+console.log(localStorage)
+
+// template literals - backticks
+// var a=22;
+// console.log(`this is ${a}`);
