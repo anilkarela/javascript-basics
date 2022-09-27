@@ -28,7 +28,7 @@ let str="this is a string"
  var a=true;
  var b= false;
 
-// Symbol
+// Symbol  // unique, if two same text string are stored in different-2 symbol , and if we compare them they will be different 
 var sym=Symbol("this is a symbol");
 var sym1=Symbol("this is a symbol");
 
@@ -153,7 +153,7 @@ console.log(elem);
 let elemClass = document.getElementsByClassName('txt');
 console.log(elemClass);
 elemClass[0].style.color="blue";
-// elemClass[1].style.background="yellow";
+// elemClass[1].style.background="yellow";  
 elemClass[0].style.background="yellow";
 // elemClass[1].classList.add("bg-primery");
 console.log(elem.innerHTML);
@@ -189,8 +189,12 @@ console.log(selAll);
 
 
 
-function clicked(){
-    console.log("button is clicked");
+function clicked(){  // here clicked is function defined in html button
+    console.log("button was clicked");
+}
+
+function abort(){
+    console.log("aborted");
 }
 
 // window.onload=function(){
@@ -257,7 +261,7 @@ vikas.addEventListener('click',function(){
 let prevHTML=document.getElementById("intxt").innerHTML;
 
 document.querySelector("#intxt").addEventListener('mousedown',function(){
-    document.getElementById("innertxt").innerText="this is changed text after clicking the clicking the previous paragrpah Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, ut placeat! Distinctio iure, perferendis doloremque sequi nemo ipsa, odio hic, optio minima delectus voluptatibus exercitationem explicabo amet consectetur porro eaque";
+    document.getElementById("innertxt").innerText+="this is changed text after clicking the clicking the previous paragrpah Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, ut placeat! Distinctio iure, perferendis doloremque sequi nemo ipsa, odio hic, optio minima delectus voluptatibus exercitationem explicabo amet consectetur porro eaque";
     console.log("mouse clicked in");
     document.getElementById("intxt").style.backgroundColor="yellow";
 })
